@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>me.mattstudios.mg-gui-plugin</id>
+    <name>MF-GUI</name>
+    <version>1.0</version>
+    <vendor url="https://mf.mattstudios.me/">MattStudios</vendor>
+
+    <description><![CDATA[
+    Will change this description later! Please senpai
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends optional="true" config-file="withKotlin.xml">org.jetbrains.kotlin</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>

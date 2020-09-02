@@ -1,0 +1,13 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <localInspection
+                language="kotlin"
+                displayName="Inspection for kotlin"
+                groupName="Kotlin visitor"
+                groupPath="Kotlin"
+                enabledByDefault="true"
+                level="WEAK WARNING"
+                implementationClass="me.mattstudios.mfhelper.inspection.KotlinInspection"
+        />
+    </extensions>
+</idea-plugin>
