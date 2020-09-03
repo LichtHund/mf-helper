@@ -14,6 +14,10 @@
     <depends optional="true" config-file="withKotlin.xml">org.jetbrains.kotlin</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="MF-GUI Helper"
+                    anchor="right"
+                    factoryClass="me.mattstudios.mfhelper.window.GuiWindowFactory"
+                    canCloseContents="true"/>
     </extensions>
 
     <actions>
