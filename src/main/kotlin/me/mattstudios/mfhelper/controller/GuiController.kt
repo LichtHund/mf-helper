@@ -8,7 +8,8 @@ import me.mattstudios.mfhelper.base.Gui
 object GuiController {
 
     val AVAILABLE_GUI = listOf("Gui", "PaginatedGui")
-    private val activeGui = mutableMapOf<String, Gui>()
+
+    val activeGui = mutableMapOf<String, Gui>()
 
     fun addGui(name: String, gui: Gui) {
         activeGui[name] = gui

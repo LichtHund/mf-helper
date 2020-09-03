@@ -4,6 +4,7 @@ import com.intellij.psi.PsiElementVisitor
 import com.intellij.psi.PsiFile
 import me.mattstudios.mfhelper.base.Gui
 import me.mattstudios.mfhelper.controller.GuiController
+import me.mattstudios.mfhelper.window.Test
 import org.jetbrains.kotlin.idea.debugger.sequence.psi.resolveType
 import org.jetbrains.kotlin.psi.KtProperty
 import org.jetbrains.kotlin.psi.KtTreeVisitorVoid
@@ -49,6 +50,7 @@ class KotlinVisitor : PsiElementVisitor() {
 
                             argumentType.toString() == "String" -> {
                                 arguments["title"] = argument.text
+                                //if (argument.text.contains("refresh")) Test.test()
                             }
 
                         }
@@ -60,7 +62,7 @@ class KotlinVisitor : PsiElementVisitor() {
             }
         })
 
-        GuiController.test()
+        Test.update()
 
     }
 

@@ -4,7 +4,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.content.ContentFactory
-import me.mattstudios.mfhelper.form.TestToolWindow
+import com.intellij.ui.jcef.JBCefApp
 
 /**
  * @author Matt
@@ -13,7 +13,12 @@ class GuiWindowFactory : ToolWindowFactory {
 
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
         val contentFactory = ContentFactory.SERVICE.getInstance()
-        val content = contentFactory.createContent(TestToolWindow(toolWindow).panel, "", false)
+
+        if (!JBCefApp.isSupported()) return
+        println("is supported")
+        //val test = Test()
+
+        val content = contentFactory.createContent(Test.create(), "", false)
         toolWindow.contentManager.addContent(content)
     }
 
